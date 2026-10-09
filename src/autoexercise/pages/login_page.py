@@ -19,6 +19,10 @@ class LoginPage(BasePage):
         return self.page.get_by_text("Your email or password is incorrect!")
 
     @property
+    def email_already_exists_error_message(self) -> Locator:
+        return self.page.get_by_text("Email Address already exist!")
+
+    @property
     def signup_error(self) -> Locator:
         return self.page.get_by_text("Email Address already exist!")
 
