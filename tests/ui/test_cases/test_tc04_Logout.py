@@ -1,5 +1,3 @@
-import re
-
 import pytest
 
 from tests.ui.test_cases.steps import (
