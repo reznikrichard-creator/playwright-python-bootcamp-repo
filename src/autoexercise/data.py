@@ -42,4 +42,4 @@ def build_user(**overrides) -> dict:
     user.update(overrides)
     return user
 
-SAMPLE_FILE_PATH = "sample.txt"
+SAMPLE_FILE = "sample.txt"

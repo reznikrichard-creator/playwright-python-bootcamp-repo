@@ -18,6 +18,18 @@ def verify_home_page_visible(app: App) -> None:
     assert app.home.slider.is_visible(), "Home slider should be visible"
 
 
+#could use improvment
+def verify_products_page_visible(app: App) -> None:
+    """'Verify that product page is visible successfully'"""
+    title = app.page.title()
+    assert re.search(r"Automation Exercise - All Products", title), (
+        f"Expected title to contain 'Automation Exercise - All Products', got '{title}'"
+    )
+
+    assert app.products.cards.count() > 0, "No products found"
+    assert app.products.cards.first.is_visible(), "First product should be visible"
+
+
 def sign_up_through_ui(app: App, user: dict) -> None:
     """Start signup, fill the account form, create the account, press Continue."""
     app.login.start_signup(user["name"], user["email"])

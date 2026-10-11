@@ -26,7 +26,8 @@ class ProductsPage(BasePage):
         self.page.locator("#search_product").fill(term)
         self.page.locator("#submit_search").click()
 
-    def add_to_cart(self, index: int = 0) -> None:
+    def add_to_cart(self, index: int = 0, continue_shopping: bool = True) -> None:
         """Add one product and close the dialog so the next action can follow."""
         self.add_card_to_cart(self.cards.nth(index))
-        self.continue_shopping()
+        if continue_shopping:
+            self.continue_shopping()
