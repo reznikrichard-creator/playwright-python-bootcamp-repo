@@ -1,6 +1,6 @@
 import pytest
 
-from tests.ui.test_cases.steps import verify_home_page_visible, add_first_product_from_home
+from tests.ui.test_cases.steps import add_first_product_from_home, verify_home_page_visible
 
 pytestmark = [pytest.mark.ui, pytest.mark.testcases]
 
