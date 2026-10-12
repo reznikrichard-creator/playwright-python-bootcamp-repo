@@ -1,10 +1,6 @@
 import pytest
 
-from autoexercise.pages import cart_page, base_page, products_page
-from tests.ui.test_cases.steps import (
-    verify_home_page_visible,
-    verify_products_page_visible
-)
+from tests.ui.test_cases.steps import verify_home_page_visible
 
 pytestmark = [pytest.mark.ui, pytest.mark.testcases]
 

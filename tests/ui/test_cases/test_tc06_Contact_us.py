@@ -1,10 +1,7 @@
 import pytest
 
 from autoexercise.data import SAMPLE_FILE
-from autoexercise.pages import contact_page
-from tests.ui.test_cases.steps import (
-    verify_home_page_visible
-)
+from tests.ui.test_cases.steps import verify_home_page_visible
 
 pytestmark = [pytest.mark.ui, pytest.mark.testcases]
 
@@ -22,7 +19,7 @@ def test_tc06_Contact_us(app):
     #5. Verify 'GET IN TOUCH' is visible
     assert app.contact.heading.inner_text() ==  "Get In Touch"
 
-    #6. Enter name, email, subject and message          | 7. Upload file |   8. Click 'Submit' button
+    #6. Enter name, email, subject and message| 7. Upload file |8. Click 'Submit' button
     app.contact.submit("Rich","rez@rez.com", "hello", "hello", file_path=SAMPLE_FILE)
 
     #10. Verify success message 'Success! Your details have been submitted successfully.' is visible
