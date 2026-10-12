@@ -25,10 +25,10 @@ def test_tc12_add_products_to_cart(app):
     app.products.view_cart_from_modal()
 
     # 9. Verify both products are added to Cart
-    assert app.cart.product_rows.count() == 2
+    assert app.cart.rows.count() == 2
 
-    first = app.cart.product_rows.nth(0)
-    second = app.cart.product_rows.nth(1)
+    first = app.cart.rows.nth(0)
+    second = app.cart.rows.nth(1)
 
     assert first.get_by_text("Blue Top").is_visible()
     assert second.get_by_text("Men Tshirt").is_visible()
