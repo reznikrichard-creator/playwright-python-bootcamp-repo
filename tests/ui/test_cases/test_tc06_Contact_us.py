@@ -23,7 +23,7 @@
 #     #6. Enter name, email, subject and message| 7. Upload file |8. Click 'Submit' button
 #     app.contact.submit("Rich","rez@rez.com", "hello", "hello", file_path=SAMPLE_FILE)
 
-#     #10. Verify success message 'Success! Your details have been submitted successfully.' is visible
+#     #10. Verify success message is visible
 #     app.contact.success_message.wait_for(state="visible", timeout=20000)
 
 #     assert app.contact.success_message.inner_text() == \
