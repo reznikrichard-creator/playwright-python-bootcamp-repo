@@ -29,6 +29,12 @@ def verify_products_page_visible(app: App) -> None:
     assert app.products.cards.count() > 0, "No products found"
     assert app.products.cards.first.is_visible(), "First product should be visible"
 
+def verify_products_details_page_visible(app: App) -> None:
+    """'Verify that product page is visible successfully'"""
+    title = app.page.title()
+    assert re.search(r"Automation Exercise - Product Details", title), (
+        f"Expected title to contain 'Automation Exercise - Product Details', got '{title}'"
+    )
 
 def sign_up_through_ui(app: App, user: dict) -> None:
     """Start signup, fill the account form, create the account, press Continue."""

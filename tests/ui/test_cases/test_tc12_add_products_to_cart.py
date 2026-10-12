@@ -1,6 +1,6 @@
 import pytest
 
-from tests.ui.test_cases.steps import verify_home_page_visible
+from tests.ui.test_cases.steps import verify_home_page_visible, add_first_product_from_home
 
 pytestmark = [pytest.mark.ui, pytest.mark.testcases]
 
@@ -16,7 +16,7 @@ def test_tc12_add_products_to_cart(app):
     app.nav.products_link.click()
 
     #5. Hover over first product and click 'Add to cart' & 6. Click 'Continue Shopping' button
-    app.products.add_to_cart(0)
+    add_first_product_from_home(app)
 
     #7. Hover over second product and click 'Add to cart'
     app.products.add_to_cart(1, continue_shopping= False)
