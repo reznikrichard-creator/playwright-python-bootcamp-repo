@@ -54,14 +54,17 @@ def test_tc14_order_register_while_checkout(app, signup_user):
 
     # 15. Enter description in comment text area and click 'Place Order'
     app.checkout.place_order("Please deliver my order carefully.")
+
     # 16. Enter payment details: Name on Card, Card Number, CVC, Expiration date
-    app.payment.pay(build_card())
     # 17. Click 'Pay and Confirm Order' button
-    
+    app.payment.pay(build_card())
+
     # 18. Verify success message 'Your order has been placed successfully!'
     assert app.order.heading.is_visible()
+    
     # 19. Click 'Delete Account' button
-    delete_account_through_ui(app)
     # 20. Verify 'ACCOUNT DELETED!' and click 'Continue' button
+    delete_account_through_ui(app)
+
 
 
