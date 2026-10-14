@@ -1,10 +1,15 @@
 import pytest
 
 from autoexercise.data import build_card
-from autoexercise.pages import checkout_page
-
-
-from tests.ui.test_cases.steps import delete_account_through_ui, verify_address_and_review, verify_logged_in_as, verify_home_page_visible,add_first_product_from_home,verify_cart_page_visible,  sign_up_through_ui
+from tests.ui.test_cases.steps import (
+    add_first_product_from_home,
+    delete_account_through_ui,
+    sign_up_through_ui,
+    verify_address_and_review,
+    verify_cart_page_visible,
+    verify_home_page_visible,
+    verify_logged_in_as,
+)
 
 pytestmark = [pytest.mark.ui, pytest.mark.testcases]
 
