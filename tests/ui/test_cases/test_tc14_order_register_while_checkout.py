@@ -36,7 +36,8 @@ def test_tc14_order_register_while_checkout(app, signup_user):
     # 8. Click 'Register / Login' button
     app.cart.register_login_link.click()
 
-    # 9. Fill all details in Signup and create account # 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button
+    # 9. Fill all details in Signup and create account 
+    # # 10. Verify 'ACCOUNT CREATED!' and click 'Continue' button
     sign_up_through_ui(app, signup_user)
 
     # 11. Verify ' Logged in as username' at top
