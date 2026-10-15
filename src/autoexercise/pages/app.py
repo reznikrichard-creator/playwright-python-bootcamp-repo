@@ -13,6 +13,7 @@ from playwright.sync_api import Page
 
 from autoexercise.pages.account_page import AccountPage
 from autoexercise.pages.cart_page import CartPage
+from autoexercise.pages.category_page import CategoryPage
 from autoexercise.pages.checkout_page import CheckoutPage, OrderConfirmationPage, PaymentPage
 from autoexercise.pages.contact_page import ContactPage
 from autoexercise.pages.home_page import HomePage
@@ -38,6 +39,7 @@ class App:
         self.checkout = CheckoutPage(page)
         self.payment = PaymentPage(page)
         self.order = OrderConfirmationPage(page)
+        self.category = CategoryPage(page)
 
     # Parts shared by every page. The home page object carries them.
     @property
