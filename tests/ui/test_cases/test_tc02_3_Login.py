@@ -9,6 +9,7 @@ pytestmark = [pytest.mark.ui, pytest.mark.testcases]
 
 
 def test_tc02_Login_Happy_Path(app):
+
     # 1-2 Open the application website
     app.home.open()
 
