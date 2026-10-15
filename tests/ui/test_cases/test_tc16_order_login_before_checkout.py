@@ -11,7 +11,7 @@ from tests.ui.test_cases.steps import (
     verify_logged_in_as,
 )
 
-pytestmark = [pytest.mark.ui, pytest.mark.testcases]
+pytestmark = [pytest.mark.ui, pytest.mark.testcases, pytest.mark.checkout]
 
 
 def test_tc16_order_login_before_checkout(app):
