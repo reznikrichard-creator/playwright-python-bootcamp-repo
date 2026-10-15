@@ -11,6 +11,10 @@ class CartPage(BasePage):
         return self.page.locator("#cart_info_table tbody tr")
 
     @property
+    def empty_cart(self) -> Locator:
+        return self.page.locator("#empty_cart")
+
+    @property
     def item_names(self) -> Locator:
         return self.page.locator("#cart_info_table .cart_description h4 a")
 
